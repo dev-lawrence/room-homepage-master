@@ -1,0 +1,30 @@
+@use './colors' as *;
+// HEADER SECTION
+.header {
+  background-color: $DarkGray;
+  height: 100%;
+
+  &__content-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .menu {
+      background-image: url(../../images/icon-hamburger.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: rem(2);
+      width: rem(2);
+    }
+  }
+
+  .nav {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.main {
+  display: none;
+}
