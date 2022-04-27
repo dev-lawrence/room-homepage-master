@@ -1,4 +1,5 @@
 @use './colors' as *;
+@use '../util/functions' as *;
 // HEADER SECTION
 .header {
   background-color: $DarkGray;
@@ -8,21 +9,65 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: rem(24) rem(16);
 
     .menu {
       background-image: url(../../images/icon-hamburger.svg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      height: rem(2);
-      width: rem(2);
+      height: rem(18);
+      width: rem(25);
+      cursor: pointer;
+    }
+
+    .menu.active {
+      background-image: url(../../images/icon-close.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: rem(20);
+      width: rem(20);
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .logo {
+      padding-top: rem(8);
+    }
+
+    &.active {
+      background-color: $White;
     }
   }
 
   .nav {
-    opacity: 0;
-    pointer-events: none;
+    // opacity: 0;
+    position: relative;
+
+    &__menu {
+      overflow: hidden;
+      display: flex;
+      position: absolute;
+      top: rem(-10);
+      right: rem(-13);
+      transition: right 3s ease-in;
+
+      li {
+        padding: 0 rem(18);
+      }
+
+      a {
+        font-weight: 500;
+        color: $Black;
+        text-transform: lowercase;
+      }
+    }
   }
+}
+
+.nav__menu.active {
+  right: 0;
 }
 
 .main {

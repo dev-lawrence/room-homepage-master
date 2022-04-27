@@ -1,30 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap");
-.header {
-  background-color: hsl(0deg, 0%, 63%);
-  height: 100%;
-}
-.header__content-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.header__content-nav .menu {
-  background-image: url(../../images/icon-hamburger.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: rem(2);
-  width: rem(2);
-}
-.header .nav {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.main {
-  display: none;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -47,5 +21,68 @@ li {
 }
 
 .hide {
+  display: none;
+}
+
+.header {
+  background-color: hsl(0deg, 0%, 63%);
+  height: 100%;
+}
+.header__content-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+}
+.header__content-nav .menu {
+  background-image: url(../../images/icon-hamburger.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 1.125rem;
+  width: 1.5625rem;
+  cursor: pointer;
+}
+.header__content-nav .menu.active {
+  background-image: url(../../images/icon-close.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 1.25rem;
+  width: 1.25rem;
+  cursor: pointer;
+  z-index: 10;
+}
+.header__content-nav .logo {
+  padding-top: 0.5rem;
+}
+.header__content-nav.active {
+  background-color: hsl(0deg, 0%, 100%);
+}
+.header .nav {
+  position: relative;
+}
+.header .nav__menu {
+  overflow: hidden;
+  display: flex;
+  position: absolute;
+  top: -0.625rem;
+  right: -0.8125rem;
+  transition: right 3s ease-in;
+}
+.header .nav__menu li {
+  padding: 0 1.125rem;
+}
+.header .nav__menu a {
+  font-weight: 500;
+  color: hsl(0deg, 0%, 0%);
+  text-transform: lowercase;
+}
+
+.nav__menu.active {
+  right: 0;
+}
+
+.main {
   display: none;
 }
