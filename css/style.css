@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -15,7 +16,8 @@ img {
   width: 100%;
 }
 
-a {
+a,
+span {
   text-decoration: none;
   display: inline-block;
 }
@@ -98,8 +100,7 @@ li {
   transform: translateX(0);
 }
 .header .slider {
-  width: 100%;
-  margin: 0 auto;
+  width: 490px;
   overflow: hidden;
   position: relative;
 }
@@ -117,6 +118,7 @@ li {
   right: 0rem;
   background-color: hsl(0deg, 0%, 0%);
   padding: 0.7rem 1.25rem;
+  z-index: 999;
 }
 .header .buttons img {
   width: 0.625rem;
@@ -125,6 +127,47 @@ li {
 }
 .header .buttons .prev-btn {
   margin-right: 2.1875rem;
+}
+
+.hero {
+  position: relative;
+  min-height: 350px;
+}
+.hero__content {
+  position: absolute;
+  padding: 2.5rem 1rem 0;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.hero__content h1 {
+  font-size: 2.1875rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.hero__content p {
+  color: hsl(0deg, 0%, 63%);
+}
+.hero__content .cta {
+  display: flex;
+  align-items: center;
+  margin-top: 1.875rem;
+}
+.hero__content .cta .span {
+  text-transform: uppercase;
+  color: hsl(0deg, 0%, 27%);
+  letter-spacing: 0.5625rem;
+  font-size: 0.9375rem;
+  margin-right: 1.375rem;
+  font-weight: 500;
+  display: none;
+}
+.hero__content .cta img {
+  width: 3.125rem;
+  height: 3.125rem;
+  object-fit: contain;
+}
+.hero__content.active {
+  opacity: 1;
 }
 
 .main {

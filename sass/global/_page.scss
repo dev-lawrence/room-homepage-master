@@ -1,9 +1,9 @@
 @use './colors' as *;
 @use '../util/functions' as *;
+
 // HEADER SECTION
 .header {
   background-color: $White;
-  // height: 100%;
   overflow-x: hidden;
 
   &.active {
@@ -85,8 +85,7 @@
 
   // SLIDERS
   .slider {
-    width: 100%;
-    margin: 0 auto;
+    width: 490px;
     overflow: hidden;
     position: relative;
 
@@ -108,6 +107,7 @@
     right: rem(0);
     background-color: $Black;
     padding: rem(11.2) rem(20);
+    z-index: 999;
 
     img {
       width: rem(10);
@@ -117,6 +117,54 @@
 
     .prev-btn {
       margin-right: rem(35);
+    }
+  }
+}
+
+// HERO SECTION
+.hero {
+  position: relative;
+  min-height: 350px;
+
+  &__content {
+    position: absolute;
+    padding: rem(40) rem(16) 0;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    h1 {
+      font-size: rem(35);
+      line-height: 1;
+      margin-bottom: rem(16);
+    }
+
+    p {
+      color: $DarkGray;
+    }
+
+    .cta {
+      display: flex;
+      align-items: center;
+      margin-top: rem(30);
+
+      .span {
+        text-transform: uppercase;
+        color: $VeryDarkGray;
+        letter-spacing: rem(9);
+        font-size: rem(15);
+        margin-right: rem(22);
+        font-weight: 500;
+        display: none;
+      }
+
+      img {
+        width: rem(50);
+        height: rem(50);
+        object-fit: contain;
+      }
+    }
+
+    &.active {
+      opacity: 1;
     }
   }
 }
