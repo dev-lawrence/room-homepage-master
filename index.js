@@ -12,6 +12,7 @@ let currentSlide = 0;
 const hero = document.querySelector('.hero');
 const heroContainer = document.querySelector('.hero__container');
 const heroText = Array.from(heroContainer.children);
+const overLay = document.querySelector('.overlay');
 
 // FUNCTION TO MOVE SLIDE
 // move the slides
@@ -72,5 +73,5 @@ menuBar.addEventListener('click', () => {
   headerContent.classList.toggle('active');
   logo.classList.toggle('active');
   navMenu.classList.toggle('active');
-  document.querySelector('.header').classList.toggle('active');
+  overLay.classList.toggle('show');
 });

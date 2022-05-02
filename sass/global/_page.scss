@@ -6,9 +6,9 @@
   background-color: $White;
   overflow-x: hidden;
 
-  &.active {
-    background-color: $VeryDarkGray;
-  }
+  // &.active {
+  //   background-color: $VeryDarkGray;
+  // }
 
   &__content-nav {
     position: fixed;
@@ -87,6 +87,7 @@
   .slider {
     width: 490px;
     overflow: hidden;
+    z-index: 1;
     position: relative;
 
     &__container {
@@ -107,7 +108,7 @@
     right: rem(0);
     background-color: $Black;
     padding: rem(11.2) rem(20);
-    z-index: 999;
+    // z-index: 999;
 
     img {
       width: rem(10);
@@ -142,9 +143,12 @@
     }
 
     .cta {
-      display: flex;
-      align-items: center;
       margin-top: rem(30);
+
+      .flex {
+        display: flex;
+        align-items: center;
+      }
 
       .span {
         text-transform: uppercase;
@@ -153,7 +157,6 @@
         font-size: rem(15);
         margin-right: rem(22);
         font-weight: 500;
-        display: none;
       }
 
       img {
@@ -169,6 +172,20 @@
   }
 }
 
-.main {
-  display: none;
+// ABOUT SECTION
+.about {
+  &__text {
+    padding: rem(40) rem(16);
+
+    h2 {
+      text-transform: uppercase;
+      letter-spacing: rem(5);
+      font-size: rem(20);
+      margin-bottom: rem(12);
+    }
+
+    p {
+      color: $DarkGray;
+    }
+  }
 }
