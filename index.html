@@ -23,7 +23,7 @@
           <!-- nav menu -->
           <nav class="nav">
             <ul class="nav__menu">
-              <li><a href="#about">Home</a></li>
+              <li><a class="active-nav" href="#about">Home</a></li>
               <li><a href="#">Shop</a></li>
               <li><a href="#">About </a></li>
               <li><a href="#"> Contact</a></li>
@@ -34,17 +34,25 @@
         <!-- header content -->
         <div class="slider">
           <div class="slider__container">
+            <!-- <div class="img next"></div>
+            <div class="img"></div>
+            <div class="img"></div> -->
             <img
+              class="hide"
               src="./images/desktop-image-hero-1.jpg"
               aria-label="image-1"
               alt="hero-img"
             />
+
             <img
+              class="hide"
               src="./images/desktop-image-hero-2.jpg"
               aria-label="image-2"
               alt="hero-img"
             />
+
             <img
+              class="hide"
               src="./images/desktop-image-hero-3.jpg"
               aria-label="image-3"
               alt="hero-img"
@@ -86,7 +94,7 @@
 
         <!-- HERO SECTION -->
         <section class="hero">
-          <div class="hero__container container">
+          <div class="hero__container">
             <div class="hero__content active">
               <h1>Discover innovative ways to decorate</h1>
               <p>
@@ -156,13 +164,15 @@
     <section id="about" class="about">
       <div class="about__container">
         <div class="about__content">
-          <img
-            src="./images/image-about-dark.jpg"
-            aria-label="dark-image"
-            alt="image-about-dark"
-          />
+          <div>
+            <img
+              src="./images/image-about-dark.jpg"
+              aria-label="dark-image"
+              alt="image-about-dark"
+            />
+          </div>
 
-          <div class="about__text">
+          <div class="about__text container">
             <h2>About our furniture</h2>
             <p>
               Our multifunctional collection blends design and function to suit
@@ -174,11 +184,13 @@
             </p>
           </div>
 
-          <img
-            src="./images/image-about-light.jpg"
-            aria-label="light-image"
-            alt="image-about-light"
-          />
+          <div>
+            <img
+              src="./images/image-about-light.jpg"
+              aria-label="light-image"
+              alt="image-about-light"
+            />
+          </div>
         </div>
       </div>
     </section>

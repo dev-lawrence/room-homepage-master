@@ -2,6 +2,7 @@ const menuBar = document.querySelector('.menu');
 const headerContent = document.querySelector('.header__content-nav');
 const logo = document.querySelector('.logo');
 const navMenu = document.querySelector('.nav__menu');
+const navLinks = Array.from(navMenu.children);
 const slider = document.querySelector('.slider');
 const sliderContainer = document.querySelector('.slider__container');
 const slides = Array.from(sliderContainer.children);
@@ -12,10 +13,47 @@ let currentSlide = 0;
 const hero = document.querySelector('.hero');
 const heroContainer = document.querySelector('.hero__container');
 const heroText = Array.from(heroContainer.children);
+const body = document.querySelector('body');
 const overLay = document.querySelector('.overlay');
 
-// FUNCTION TO MOVE SLIDE
-// move the slides
+// ADD BG COLOR NAV ON SCROLL
+const showBgColor = () => {
+  const scroll = window.scrollY;
+
+  if (scroll > 200) {
+    menuBar.classList.add('color');
+    logo.classList.add('color');
+    //ADD BG TO HEADER
+  } else {
+    menuBar.classList.remove('color');
+    logo.classList.remove('color');
+  }
+};
+
+window.addEventListener('scroll', showBgColor);
+
+// MENU
+const menuFunction = () => {
+  menuBar.classList.toggle('active');
+  headerContent.classList.toggle('active');
+  logo.classList.toggle('active');
+  navMenu.classList.toggle('active');
+  body.classList.toggle('show');
+  overLay.classList.toggle('show');
+};
+
+// toggle menu on click
+menuBar.addEventListener('click', () => {
+  menuFunction();
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    menuFunction();
+  });
+});
+
+// MOVE SLIDE //
 const moveSlide = () => {
   sliderContainer.style.transform = `translateX(-${
     currentSlide * slideSize
@@ -66,12 +104,3 @@ const prevSlide = () => {
 // Event listeners for sliders
 nextBtn.addEventListener('click', nextSlide);
 prevBtn.addEventListener('click', prevSlide);
-
-// toggle menu on click
-menuBar.addEventListener('click', () => {
-  menuBar.classList.toggle('active');
-  headerContent.classList.toggle('active');
-  logo.classList.toggle('active');
-  navMenu.classList.toggle('active');
-  overLay.classList.toggle('show');
-});

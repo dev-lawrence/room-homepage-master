@@ -1,17 +1,15 @@
 @use './colors' as *;
 @use '../util/functions' as *;
+@use '../util/breakpoints' as *;
 
 // HEADER SECTION
 .header {
   background-color: $White;
   overflow-x: hidden;
 
-  // &.active {
-  //   background-color: $VeryDarkGray;
-  // }
-
   &__content-nav {
     position: fixed;
+
     width: 100%;
     display: flex;
     align-items: center;
@@ -41,12 +39,21 @@
       z-index: 10;
     }
 
+    .menu.color {
+      filter: brightness(1) invert(2);
+    }
+
     .logo {
       padding-top: rem(8);
+      display: none;
 
       &.active {
         opacity: 0;
         pointer-events: none;
+      }
+
+      &.color {
+        filter: brightness(1) invert(2);
       }
     }
 
@@ -85,12 +92,17 @@
 
   // SLIDERS
   .slider {
-    width: 490px;
+    width: 100%;
     overflow: hidden;
     z-index: 1;
     position: relative;
 
+    @include medium {
+      height: 100%;
+    }
+
     &__container {
+      width: 100%;
       display: flex;
       transform: translateX(0);
       transition: transform 0.7s ease;
@@ -98,6 +110,7 @@
 
     img {
       object-fit: contain;
+      height: 100%;
     }
   }
 
@@ -108,7 +121,6 @@
     right: rem(0);
     background-color: $Black;
     padding: rem(11.2) rem(20);
-    // z-index: 999;
 
     img {
       width: rem(10);
@@ -125,13 +137,14 @@
 // HERO SECTION
 .hero {
   position: relative;
-  min-height: 350px;
+  min-height: rem(350);
 
   &__content {
     position: absolute;
     padding: rem(40) rem(16) 0;
     opacity: 0;
     transition: opacity 0.7s ease;
+
     h1 {
       font-size: rem(35);
       line-height: 1;

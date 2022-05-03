@@ -9,25 +9,34 @@
   scroll-behavior: smooth;
 }
 
+h1,
+h2,
+p {
+  line-height: 1.4;
+}
+
 body {
   font-family: $font-family;
-  line-height: 1.4;
   height: 100vh;
 
-  // &.active {
-  //   background-color: $VeryDarkGray;
-  // }
+  .overlay {
+    background-color: $VeryDarkGray;
+    opacity: 0;
+    position: fixed;
+    top: rem(74);
+    height: 100%;
+    width: 100%;
+    transition: opacity 0.3s ease-in;
+  }
 }
 
 .overlay.show {
-  background-color: $VeryDarkGray;
-
   opacity: 0.7;
-  position: fixed;
-  top: rem(78);
-  width: 100%;
-  height: 100%;
-  z-index: 999;
+  z-index: 14;
+}
+
+body.show {
+  overflow: hidden;
 }
 
 img {
