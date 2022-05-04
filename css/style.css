@@ -122,12 +122,29 @@ li {
   overflow: hidden;
   position: relative;
 }
+@media (min-width: 1024px) {
+  .flex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 .slider {
-  width: 600px;
+  width: 650px;
   overflow: hidden;
   z-index: 1;
   position: relative;
+}
+@media (min-width: 576px) {
+  .slider {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .slider {
+    grid-row: 1/4;
+    width: 650px;
+  }
 }
 .slider__container {
   width: 100%;
@@ -144,6 +161,13 @@ li {
   width: 100%;
   display: flex;
 }
+@media (min-width: 1024px) {
+  .buttons {
+    display: block;
+    grid-column: 2/3;
+    grid-row: 3;
+  }
+}
 .buttons button {
   z-index: 10;
   padding: 0.6875rem 1.25rem;
@@ -153,13 +177,24 @@ li {
 }
 .buttons button.next {
   position: absolute;
+  top: 22.54375rem;
   right: 0;
-  top: 20.6rem;
+}
+@media (min-width: 1024px) {
+  .buttons button.next {
+    position: static;
+    margin-left: -0.3rem;
+  }
 }
 .buttons button.prev {
   position: absolute;
-  top: 20.6rem;
+  top: 22.54375rem;
   right: 3.4rem;
+}
+@media (min-width: 1024px) {
+  .buttons button.prev {
+    position: static;
+  }
 }
 .buttons img {
   width: 0.9375rem;
@@ -170,6 +205,11 @@ li {
 .hero {
   position: relative;
   min-height: 21.875rem;
+}
+@media (min-width: 1024px) {
+  .hero {
+    grid-column: 2/-1;
+  }
 }
 .hero__content {
   position: absolute;
@@ -220,4 +260,15 @@ li {
 }
 .about__text p {
   color: hsl(0deg, 0%, 63%);
+}
+@media (min-width: 1024px) {
+  .about__content {
+    display: flex;
+  }
+  .about__content > * {
+    flex-basis: 100%;
+  }
+  .about__content img {
+    height: 100%;
+  }
 }

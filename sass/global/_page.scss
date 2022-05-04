@@ -93,14 +93,28 @@
 .flex {
   overflow: hidden;
   position: relative;
+
+  @include large {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 // SLIDERS
 .slider {
-  width: 600px;
+  width: 650px;
   overflow: hidden;
   z-index: 1;
   position: relative;
+
+  @include landscape {
+    width: 100%;
+  }
+
+  @include large {
+    grid-row: 1/4;
+    width: 650px;
+  }
 
   &__container {
     width: 100%;
@@ -120,6 +134,13 @@
   width: 100%;
   display: flex;
 
+  @include large {
+    display: block;
+
+    grid-column: 2/3;
+    grid-row: 3;
+  }
+
   button {
     z-index: 10;
     padding: rem(11) rem(20);
@@ -130,14 +151,23 @@
 
   button.next {
     position: absolute;
+    top: rem(360.7);
     right: 0;
-    top: 20.6rem;
+
+    @include large {
+      position: static;
+      margin-left: -0.3rem;
+    }
   }
 
   button.prev {
     position: absolute;
-    top: 20.6rem;
+    top: rem(360.7);
     right: 3.4rem;
+
+    @include large {
+      position: static;
+    }
   }
 
   img {
@@ -151,6 +181,10 @@
 .hero {
   position: relative;
   min-height: rem(350);
+
+  @include large {
+    grid-column: 2/-1;
+  }
 
   &__content {
     position: absolute;
@@ -212,6 +246,20 @@
 
     p {
       color: $DarkGray;
+    }
+  }
+
+  @include large {
+    &__content {
+      display: flex;
+
+      & > * {
+        flex-basis: 100%;
+      }
+
+      img {
+        height: 100%;
+      }
     }
   }
 }
