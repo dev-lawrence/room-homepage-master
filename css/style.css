@@ -6,21 +6,16 @@
   scroll-behavior: smooth;
 }
 
-h1,
-h2,
-p {
-  line-height: 1.4;
-}
-
 body {
   font-family: "League Spartan", sans-serif;
+  line-height: 1.4;
   height: 100vh;
 }
 body .overlay {
   background-color: hsl(0deg, 0%, 27%);
   opacity: 0;
   position: fixed;
-  top: 4.625rem;
+  top: 4.375rem;
   height: 100%;
   width: 100%;
   transition: opacity 0.3s ease-in;
@@ -37,6 +32,7 @@ body.show {
 
 img {
   width: 100%;
+  vertical-align: middle;
 }
 
 a,
@@ -51,10 +47,12 @@ li {
 
 .header {
   background-color: hsl(0deg, 0%, 100%);
-  overflow-x: hidden;
+}
+.header__container {
+  position: relative;
 }
 .header__content-nav {
-  position: fixed;
+  position: absolute;
   width: 100%;
   display: flex;
   align-items: center;
@@ -101,18 +99,15 @@ li {
 }
 .header .nav {
   position: relative;
+  overflow-x: hidden;
 }
 .header .nav__menu {
-  overflow: hidden;
   display: flex;
-  position: absolute;
-  top: -0.625rem;
-  right: -0.8125rem;
   transform: translateX(25rem);
   transition: transform 0.7s ease-in;
 }
 .header .nav__menu li {
-  padding: 0 1.125rem;
+  padding: 0 1rem;
 }
 .header .nav__menu a {
   font-weight: 600;
@@ -122,41 +117,54 @@ li {
 .header .nav__menu.active {
   transform: translateX(0);
 }
-.header .slider {
-  width: 100%;
+
+.flex {
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  width: 600px;
   overflow: hidden;
   z-index: 1;
   position: relative;
 }
-@media (min-width: 768px) {
-  .header .slider {
-    height: 100%;
-  }
-}
-.header .slider__container {
+.slider__container {
   width: 100%;
   display: flex;
   transform: translateX(0);
   transition: transform 0.7s ease;
 }
-.header .slider img {
+.slider img {
   object-fit: contain;
   height: 100%;
 }
-.header .buttons {
-  position: absolute;
-  bottom: 0;
-  right: 0rem;
-  background-color: hsl(0deg, 0%, 0%);
-  padding: 0.7rem 1.25rem;
+
+.buttons {
+  width: 100%;
+  display: flex;
 }
-.header .buttons img {
-  width: 0.625rem;
+.buttons button {
+  z-index: 10;
+  padding: 0.6875rem 1.25rem;
+  border: none;
+  outline: none;
+  background-color: hsl(0deg, 0%, 0%);
+}
+.buttons button.next {
+  position: absolute;
+  right: 0;
+  top: 20.6rem;
+}
+.buttons button.prev {
+  position: absolute;
+  top: 20.6rem;
+  right: 3.4rem;
+}
+.buttons img {
+  width: 0.9375rem;
   cursor: pointer;
   padding-top: 0.3125rem;
-}
-.header .buttons .prev-btn {
-  margin-right: 2.1875rem;
 }
 
 .hero {
