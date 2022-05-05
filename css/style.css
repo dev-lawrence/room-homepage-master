@@ -23,7 +23,7 @@ body .overlay {
 
 .overlay.show {
   opacity: 0.7;
-  z-index: 14;
+  z-index: 40;
 }
 
 body.show {
@@ -159,10 +159,15 @@ li {
 
 .buttons {
   width: 100%;
+  position: absolute;
+  top: 22.5rem;
   display: flex;
+  justify-content: flex-end;
+  z-index: 20;
 }
 @media (min-width: 1024px) {
   .buttons {
+    position: static;
     display: block;
     grid-column: 2/3;
     grid-row: 3;
@@ -175,27 +180,6 @@ li {
   outline: none;
   background-color: hsl(0deg, 0%, 0%);
 }
-.buttons button.next {
-  position: absolute;
-  top: 22.54375rem;
-  right: 0;
-}
-@media (min-width: 1024px) {
-  .buttons button.next {
-    position: static;
-    margin-left: -0.3rem;
-  }
-}
-.buttons button.prev {
-  position: absolute;
-  top: 22.54375rem;
-  right: 3.4rem;
-}
-@media (min-width: 1024px) {
-  .buttons button.prev {
-    position: static;
-  }
-}
 .buttons img {
   width: 0.9375rem;
   cursor: pointer;
@@ -204,11 +188,12 @@ li {
 
 .hero {
   position: relative;
-  min-height: 21.875rem;
+  min-height: 23.125rem;
 }
 @media (min-width: 1024px) {
   .hero {
     grid-column: 2/-1;
+    min-height: 21.875rem;
   }
 }
 .hero__content {

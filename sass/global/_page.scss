@@ -132,11 +132,15 @@
 // BUTTONS
 .buttons {
   width: 100%;
+  position: absolute;
+  top: rem(360);
   display: flex;
+  justify-content: flex-end;
+  z-index: 20;
 
   @include large {
+    position: static;
     display: block;
-
     grid-column: 2/3;
     grid-row: 3;
   }
@@ -149,26 +153,26 @@
     background-color: $Black;
   }
 
-  button.next {
-    position: absolute;
-    top: rem(360.7);
-    right: 0;
+  // button.next {
+  //   // position: absolute;
+  //   // top: rem(360.7);
+  //   // right: 0;
 
-    @include large {
-      position: static;
-      margin-left: -0.3rem;
-    }
-  }
+  //   @include large {
+  //     position: static;
+  //     margin-left: -0.3rem;
+  //   }
+  // }
 
-  button.prev {
-    position: absolute;
-    top: rem(360.7);
-    right: 3.4rem;
+  // button.prev {
+  //   // position: absolute;
+  //   // top: rem(360.7);
+  //   // right: 3.4rem;
 
-    @include large {
-      position: static;
-    }
-  }
+  //   @include large {
+  //     position: static;
+  //   }
+  // }
 
   img {
     width: rem(15);
@@ -180,10 +184,11 @@
 // HERO SECTION
 .hero {
   position: relative;
-  min-height: rem(350);
+  min-height: rem(370);
 
   @include large {
     grid-column: 2/-1;
+    min-height: rem(350);
   }
 
   &__content {
