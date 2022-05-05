@@ -92,7 +92,7 @@
 
 .flex {
   overflow: hidden;
-  position: relative;
+  // position: relative;
 
   @include large {
     display: grid;
@@ -114,6 +114,7 @@
   @include large {
     grid-row: 1/4;
     width: 650px;
+    position: static;
   }
 
   &__container {
@@ -133,7 +134,8 @@
 .buttons {
   width: 100%;
   position: absolute;
-  top: rem(360);
+  transform: translateY(-53px);
+  // top: rem(360);
   display: flex;
   justify-content: flex-end;
   z-index: 20;
@@ -143,6 +145,7 @@
     display: block;
     grid-column: 2/3;
     grid-row: 3;
+    transform: translateY(0px);
   }
 
   button {
