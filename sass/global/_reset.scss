@@ -43,7 +43,7 @@ body.show {
 }
 
 @include tablet {
-  .container {
+  .hero.container {
     width: 100%;
   }
 }

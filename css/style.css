@@ -37,7 +37,7 @@ body.show {
   }
 }
 @media (min-width: 912px) {
-  .container {
+  .hero.container {
     width: 100%;
   }
 }
@@ -136,6 +136,7 @@ li {
   .flex {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px;
   }
 }
 
@@ -153,7 +154,7 @@ li {
 @media (min-width: 912px) {
   .slider {
     grid-row: 1/4;
-    width: 650px;
+    width: 500px;
     position: static;
   }
 }
@@ -178,8 +179,8 @@ li {
 }
 @media (min-width: 912px) {
   .buttons {
-    position: static;
-    display: block;
+    top: 265px;
+    left: -413px;
     grid-column: 2/3;
     grid-row: 3;
     transform: translateY(0px);

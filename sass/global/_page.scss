@@ -101,6 +101,7 @@
   @include tablet {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px;
   }
 }
 
@@ -123,7 +124,7 @@
 
   @include tablet {
     grid-row: 1/4;
-    width: 650px;
+    width: 500px;
     position: static;
   }
 
@@ -158,8 +159,11 @@
   // }
 
   @include tablet {
-    position: static;
-    display: block;
+    // position: static;
+    top: 265px;
+    left: -413px;
+    // justify-content: center;
+
     grid-column: 2/3;
     grid-row: 3;
     transform: translateY(0px);
