@@ -4,14 +4,13 @@
 
 // HEADER SECTION
 .header {
-  background-color: $White;
-
   &__container {
     position: relative;
   }
 
   &__content-nav {
     position: absolute;
+    overflow-x: hidden;
     width: 100%;
     display: flex;
     align-items: center;
@@ -41,21 +40,10 @@
       z-index: 10;
     }
 
-    .menu.color {
-      filter: brightness(1) invert(2);
-    }
-
     .logo {
-      padding-top: rem(8);
-      display: none;
-
       &.active {
         opacity: 0;
         pointer-events: none;
-      }
-
-      &.color {
-        filter: brightness(1) invert(2);
       }
     }
 
@@ -66,12 +54,13 @@
 
   .nav {
     position: relative;
-    overflow-x: hidden;
 
     &__menu {
       display: flex;
+      position: absolute;
+      top: -10px;
       transform: translateX(rem(400));
-      transition: transform 0.7s ease-in;
+      transition: transform 0.5s ease-in-out;
 
       li {
         padding: 0 rem(16);
@@ -84,7 +73,7 @@
       }
 
       &.active {
-        transform: translateX(0);
+        transform: translateX(rem(-280));
       }
     }
   }
@@ -162,8 +151,6 @@
     // position: static;
     top: 265px;
     left: -413px;
-    // justify-content: center;
-
     grid-column: 2/3;
     grid-row: 3;
     transform: translateY(0px);

@@ -16,22 +16,6 @@ const heroText = Array.from(heroContainer.children);
 const body = document.querySelector('body');
 const overLay = document.querySelector('.overlay');
 
-// ADD BG COLOR NAV ON SCROLL
-const showBgColor = () => {
-  const scroll = window.scrollY;
-
-  if (scroll > 200) {
-    menuBar.classList.add('color');
-    logo.classList.add('color');
-    //ADD BG TO HEADER
-  } else {
-    menuBar.classList.remove('color');
-    logo.classList.remove('color');
-  }
-};
-
-window.addEventListener('scroll', showBgColor);
-
 // MENU
 const menuFunction = () => {
   menuBar.classList.toggle('active');
