@@ -25,20 +25,36 @@ body .overlay {
   opacity: 0.7;
   z-index: 40;
 }
+@media (min-width: 912px) {
+  .overlay.show {
+    opacity: 0;
+  }
+}
 
 body.show {
   overflow: hidden;
 }
+@media (min-width: 912px) {
+  body.show {
+    overflow: visible;
+  }
+}
 
 @media (min-width: 576px) {
   .container {
-    width: 576px;
+    width: 36rem;
     margin: 0 auto;
   }
 }
 @media (min-width: 912px) {
   .hero.container {
     width: 100%;
+  }
+}
+@media (min-width: 1440px) {
+  .contain {
+    width: 90rem;
+    margin: 0 auto;
   }
 }
 img {
@@ -72,7 +88,7 @@ li {
 }
 @media (min-width: 912px) {
   .header__content-nav {
-    width: 410px;
+    width: 25.625rem;
     padding-top: 2.75rem;
     margin-left: 2rem;
   }
@@ -105,8 +121,19 @@ li {
   opacity: 0;
   pointer-events: none;
 }
+@media (min-width: 912px) {
+  .header__content-nav .logo.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
 .header__content-nav.active {
   background-color: hsl(0deg, 0%, 100%);
+}
+@media (min-width: 912px) {
+  .header__content-nav.active {
+    background-color: transparent;
+  }
 }
 .header .nav {
   position: relative;
@@ -114,9 +141,14 @@ li {
 .header .nav__menu {
   display: flex;
   position: absolute;
-  top: -10px;
+  top: -0.625rem;
   transform: translateX(25rem);
   transition: transform 0.5s ease-in-out;
+}
+@media (max-width: 280px) {
+  .header .nav__menu {
+    margin-left: 3rem;
+  }
 }
 @media (min-width: 912px) {
   .header .nav__menu {
@@ -128,6 +160,12 @@ li {
 }
 .header .nav__menu li {
   padding: 0 1rem;
+}
+@media (max-width: 280px) {
+  .header .nav__menu li {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
 .header .nav__menu a {
   font-weight: 600;
@@ -160,6 +198,11 @@ li {
 .header .nav__menu.active {
   transform: translateX(-17.5rem);
 }
+@media (min-width: 912px) {
+  .header .nav__menu.active {
+    transform: translateX(0rem);
+  }
+}
 
 .flex {
   overflow: hidden;
@@ -168,7 +211,7 @@ li {
   .flex {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px;
+    grid-template-rows: 12.5rem;
   }
 }
 @media (min-width: 1024px) {
@@ -178,7 +221,7 @@ li {
 }
 
 .slider {
-  width: 650px;
+  width: 40.625rem;
   overflow: hidden;
   z-index: 1;
   position: relative;
@@ -191,18 +234,23 @@ li {
 @media (min-width: 912px) {
   .slider {
     grid-row: 1/4;
-    width: 500px;
+    width: 31.25rem;
     position: static;
   }
 }
 @media (min-width: 1024px) {
   .slider {
-    width: 650px;
+    width: 40.625rem;
   }
 }
 @media (min-width: 1200px) {
   .slider {
-    width: 700px;
+    width: 43.75rem;
+  }
+}
+@media (min-width: 1440px) {
+  .slider {
+    width: 51.25rem;
   }
 }
 .slider__container {
@@ -226,8 +274,8 @@ li {
 }
 @media (min-width: 912px) {
   .buttons {
-    top: 265px;
-    left: -413px;
+    top: 16.5625rem;
+    left: -25.8125rem;
     grid-column: 2/3;
     grid-row: 3;
     transform: translateY(0px);
@@ -257,7 +305,7 @@ li {
 }
 @media (min-width: 1200px) {
   .buttons button {
-    padding: 1.5rem 1.875rem;
+    padding: 1.5rem 2.125rem;
   }
 }
 .buttons img {
@@ -269,6 +317,12 @@ li {
 .hero {
   position: relative;
   min-height: 23.125rem;
+}
+@media (max-width: 280px) {
+  .hero {
+    min-height: 25rem;
+    text-align: center;
+  }
 }
 @media (min-width: 912px) {
   .hero {
@@ -339,6 +393,17 @@ li {
 .about__text {
   padding: 2.5rem 1rem;
   z-index: 10;
+}
+@media (max-width: 280px) {
+  .about__text {
+    text-align: center;
+  }
+}
+@media (min-width: 1200px) {
+  .about__text {
+    padding-left: 3.125rem;
+    padding-right: 3.125rem;
+  }
 }
 .about__text h2 {
   text-transform: uppercase;

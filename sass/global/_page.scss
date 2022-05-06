@@ -20,7 +20,7 @@
     transition: background-color 0.5s ease-in-out;
 
     @include tablet {
-      width: 410px;
+      width: rem(410);
       padding-top: rem(44);
       margin-left: rem(32);
     }
@@ -54,11 +54,20 @@
       &.active {
         opacity: 0;
         pointer-events: none;
+
+        @include tablet {
+          opacity: 1;
+          pointer-events: all;
+        }
       }
     }
 
     &.active {
       background-color: $White;
+
+      @include tablet {
+        background-color: transparent;
+      }
     }
   }
 
@@ -68,9 +77,13 @@
     &__menu {
       display: flex;
       position: absolute;
-      top: -10px;
+      top: rem(-10);
       transform: translateX(rem(400));
       transition: transform 0.5s ease-in-out;
+
+      @include extra-small {
+        margin-left: rem(48);
+      }
 
       @include tablet {
         position: static;
@@ -81,6 +94,11 @@
 
       li {
         padding: 0 rem(16);
+
+        @include extra-small {
+          padding-left: rem(8);
+          padding-right: rem(8);
+        }
       }
 
       a {
@@ -115,6 +133,10 @@
 
       &.active {
         transform: translateX(rem(-280));
+
+        @include tablet {
+          transform: translateX(rem(0));
+        }
       }
     }
   }
@@ -126,7 +148,7 @@
   @include tablet {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px;
+    grid-template-rows: rem(200);
   }
 
   @include large {
@@ -136,7 +158,7 @@
 
 // SLIDERS
 .slider {
-  width: 650px;
+  width: rem(650);
   overflow: hidden;
   z-index: 1;
   position: relative;
@@ -147,16 +169,20 @@
 
   @include tablet {
     grid-row: 1/4;
-    width: 500px;
+    width: rem(500);
     position: static;
   }
 
   @include large {
-    width: 650px;
+    width: rem(650);
   }
 
   @include extra-large {
-    width: 700px;
+    width: rem(700);
+  }
+
+  @include huge {
+    width: rem(820);
   }
 
   &__container {
@@ -182,8 +208,8 @@
   z-index: 20;
 
   @include tablet {
-    top: 265px;
-    left: -413px;
+    top: rem(265);
+    left: rem(-413);
     grid-column: 2/3;
     grid-row: 3;
     transform: translateY(0px);
@@ -212,7 +238,7 @@
     }
 
     @include extra-large {
-      padding: rem(24) rem(30);
+      padding: rem(24) rem(34);
     }
   }
 
@@ -228,6 +254,11 @@
   position: relative;
   min-height: rem(370);
 
+  @include extra-small {
+    min-height: rem(400);
+    text-align: center;
+  }
+
   @include tablet {
     grid-column: 2/-1;
     min-height: rem(350);
@@ -241,8 +272,8 @@
 
     @include extra-large {
       width: 500px;
-      padding-top: 4rem;
-      padding-left: 3rem;
+      padding-top: rem(64);
+      padding-left: rem(48);
     }
 
     h1 {
@@ -302,6 +333,15 @@
   &__text {
     padding: rem(40) rem(16);
     z-index: 10;
+
+    @include extra-small {
+      text-align: center;
+    }
+
+    @include extra-large {
+      padding-left: rem(50);
+      padding-right: rem(50);
+    }
 
     h2 {
       text-transform: uppercase;

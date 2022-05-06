@@ -29,15 +29,23 @@ body {
 .overlay.show {
   opacity: 0.7;
   z-index: 40;
+
+  @include tablet {
+    opacity: 0;
+  }
 }
 
 body.show {
   overflow: hidden;
+
+  @include tablet {
+    overflow: visible;
+  }
 }
 
 @include landscape {
   .container {
-    width: 576px;
+    width: rem(576);
     margin: 0 auto;
   }
 }
@@ -45,6 +53,13 @@ body.show {
 @include tablet {
   .hero.container {
     width: 100%;
+  }
+}
+
+@include huge {
+  .contain {
+    width: rem(1440);
+    margin: 0 auto;
   }
 }
 
