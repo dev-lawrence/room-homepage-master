@@ -19,6 +19,12 @@
     z-index: 10;
     transition: background-color 0.5s ease-in-out;
 
+    @include tablet {
+      width: 410px;
+      padding-top: rem(44);
+      margin-left: rem(32);
+    }
+
     .menu {
       background-image: url(../../images/icon-hamburger.svg);
       background-repeat: no-repeat;
@@ -27,6 +33,10 @@
       height: rem(18);
       width: rem(25);
       cursor: pointer;
+
+      @include tablet {
+        display: none;
+      }
     }
 
     .menu.active {
@@ -62,6 +72,13 @@
       transform: translateX(rem(400));
       transition: transform 0.5s ease-in-out;
 
+      @include tablet {
+        position: static;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transform: translateX(rem(0));
+      }
+
       li {
         padding: 0 rem(16);
       }
@@ -70,6 +87,30 @@
         font-weight: 600;
         color: $Black;
         text-transform: lowercase;
+
+        position: relative;
+
+        @include tablet {
+          color: $White;
+          font-weight: normal;
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: rem(-3);
+            transform: scaleX(0);
+            transform-origin: center;
+            width: 100%;
+            height: rem(2);
+            background-color: $White;
+            transition: transform 0.4s ease-in-out, scale 0.4s ease-in-out;
+          }
+
+          &:hover:after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
       }
 
       &.active {
@@ -82,15 +123,14 @@
 .flex {
   overflow: hidden;
 
-  // @include large {
-  //   display: grid;
-  //   grid-template-columns: repeat(3, 1fr);
-  // }
-
   @include tablet {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 200px;
+  }
+
+  @include large {
+    grid-template-rows: unset;
   }
 }
 
@@ -105,16 +145,18 @@
     width: 100%;
   }
 
-  // @include large {
-  //   grid-row: 1/4;
-  //   width: 650px;
-  //   position: static;
-  // }
-
   @include tablet {
     grid-row: 1/4;
     width: 500px;
     position: static;
+  }
+
+  @include large {
+    width: 650px;
+  }
+
+  @include extra-large {
+    width: 700px;
   }
 
   &__container {
@@ -139,18 +181,18 @@
   justify-content: flex-end;
   z-index: 20;
 
-  // @include large {
-  //   position: static;
-  //   display: block;
-  //   grid-column: 2/3;
-  //   grid-row: 3;
-  //   transform: translateY(0px);
-  // }
-
   @include tablet {
-    // position: static;
     top: 265px;
     left: -413px;
+    grid-column: 2/3;
+    grid-row: 3;
+    transform: translateY(0px);
+  }
+
+  @include large {
+    position: static;
+    display: flex;
+    justify-content: flex-start;
     grid-column: 2/3;
     grid-row: 3;
     transform: translateY(0px);
@@ -161,7 +203,17 @@
     padding: rem(11) rem(20);
     border: none;
     outline: none;
+    cursor: pointer;
     background-color: $Black;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $VeryDarkGray;
+    }
+
+    @include extra-large {
+      padding: rem(24) rem(30);
+    }
   }
 
   img {
@@ -176,11 +228,6 @@
   position: relative;
   min-height: rem(370);
 
-  // @include large {
-  //   grid-column: 2/-1;
-  //   min-height: rem(350);
-  // }
-
   @include tablet {
     grid-column: 2/-1;
     min-height: rem(350);
@@ -192,10 +239,20 @@
     opacity: 0;
     transition: opacity 0.7s ease;
 
+    @include extra-large {
+      width: 500px;
+      padding-top: 4rem;
+      padding-left: 3rem;
+    }
+
     h1 {
       font-size: rem(35);
       line-height: 1;
       margin-bottom: rem(16);
+
+      @include extra-large {
+        font-size: rem(45);
+      }
     }
 
     p {
@@ -244,6 +301,7 @@
 .about {
   &__text {
     padding: rem(40) rem(16);
+    z-index: 10;
 
     h2 {
       text-transform: uppercase;
