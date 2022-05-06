@@ -3,6 +3,7 @@ $breakpoints: (
   'small': 320px,
   'landscape': 576px,
   'medium': 768px,
+  'tablet': 912px,
   'large': 1024px,
   'extra-large': 1200px,
   'huge': 1440px,
@@ -28,6 +29,12 @@ $breakpoints: (
 
 @mixin medium {
   @media (min-width: map-get($breakpoints, 'medium')) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: map-get($breakpoints, 'tablet')) {
     @content;
   }
 }

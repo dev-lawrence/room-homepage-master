@@ -9,7 +9,7 @@
 body {
   font-family: "League Spartan", sans-serif;
   line-height: 1.4;
-  height: 100vh;
+  height: 100%;
 }
 body .overlay {
   background-color: hsl(0deg, 0%, 27%);
@@ -30,6 +30,17 @@ body.show {
   overflow: hidden;
 }
 
+@media (min-width: 576px) {
+  .container {
+    width: 576px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+}
 img {
   width: 100%;
   vertical-align: middle;

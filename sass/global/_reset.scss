@@ -1,6 +1,7 @@
 @use './fonts' as *;
 @use './colors' as *;
 @use '../util/functions' as *;
+@use '../util/breakpoints' as *;
 
 * {
   margin: 0;
@@ -12,7 +13,7 @@
 body {
   font-family: $font-family;
   line-height: 1.4;
-  height: 100vh;
+  height: 100%;
 
   .overlay {
     background-color: $VeryDarkGray;
@@ -34,10 +35,18 @@ body.show {
   overflow: hidden;
 }
 
-// .container {
-//   width: 576px;
-//   margin: 0 auto;
-// }
+@include landscape {
+  .container {
+    width: 576px;
+    margin: 0 auto;
+  }
+}
+
+@include large {
+  .container {
+    width: 100%;
+  }
+}
 
 img {
   width: 100%;
