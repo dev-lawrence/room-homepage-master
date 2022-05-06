@@ -42,7 +42,7 @@ body.show {
   }
 }
 
-@include large {
+@include tablet {
   .container {
     width: 100%;
   }

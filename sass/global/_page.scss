@@ -93,7 +93,12 @@
 .flex {
   overflow: hidden;
 
-  @include large {
+  // @include large {
+  //   display: grid;
+  //   grid-template-columns: repeat(3, 1fr);
+  // }
+
+  @include tablet {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -110,7 +115,13 @@
     width: 100%;
   }
 
-  @include large {
+  // @include large {
+  //   grid-row: 1/4;
+  //   width: 650px;
+  //   position: static;
+  // }
+
+  @include tablet {
     grid-row: 1/4;
     width: 650px;
     position: static;
@@ -138,7 +149,15 @@
   justify-content: flex-end;
   z-index: 20;
 
-  @include large {
+  // @include large {
+  //   position: static;
+  //   display: block;
+  //   grid-column: 2/3;
+  //   grid-row: 3;
+  //   transform: translateY(0px);
+  // }
+
+  @include tablet {
     position: static;
     display: block;
     grid-column: 2/3;
@@ -166,7 +185,12 @@
   position: relative;
   min-height: rem(370);
 
-  @include large {
+  // @include large {
+  //   grid-column: 2/-1;
+  //   min-height: rem(350);
+  // }
+
+  @include tablet {
     grid-column: 2/-1;
     min-height: rem(350);
   }
@@ -189,6 +213,14 @@
 
     .cta {
       margin-top: rem(30);
+
+      @include tablet {
+        margin-top: 0;
+      }
+
+      @include large {
+        margin-top: unset;
+      }
 
       .flex {
         display: flex;
