@@ -226,11 +226,6 @@ li {
   z-index: 1;
   position: relative;
 }
-@media (min-width: 576px) {
-  .slider {
-    width: 100%;
-  }
-}
 @media (min-width: 912px) {
   .slider {
     grid-row: 1/4;
