@@ -244,10 +244,12 @@ li {
   }
 }
 .slider__container {
-  width: 40.625rem;
   display: flex;
   transform: translateX(0);
   transition: transform 0.7s ease;
+}
+.slider__container img {
+  width: 100%;
 }
 .slider img {
   object-fit: contain;
