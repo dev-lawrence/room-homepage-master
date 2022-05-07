@@ -143,7 +143,7 @@
 }
 
 .flex {
-  overflow: hidden;
+  // overflow: hidden;
 
   @include tablet {
     display: grid;
@@ -159,7 +159,7 @@
 // SLIDERS
 .slider {
   width: rem(650);
-  overflow: hidden;
+  // overflow: hidden;
   z-index: 1;
   position: relative;
 
@@ -189,10 +189,6 @@
     display: flex;
     transform: translateX(0);
     transition: transform 0.7s ease;
-
-    img {
-      width: 100%;
-    }
   }
 
   img {
