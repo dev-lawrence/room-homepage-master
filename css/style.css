@@ -221,7 +221,7 @@ li {
 }
 
 .slider {
-  width: 650px;
+  width: 40.625rem;
   overflow: hidden;
   z-index: 1;
   position: relative;
@@ -236,6 +236,11 @@ li {
 @media (min-width: 1024px) {
   .slider {
     width: 40.625rem;
+  }
+}
+@media (min-width: 1200px) {
+  .slider {
+    width: 43.75rem;
   }
 }
 @media (min-width: 1440px) {

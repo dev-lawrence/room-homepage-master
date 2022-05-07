@@ -158,7 +158,7 @@
 
 // SLIDERS
 .slider {
-  width: 650px;
+  width: rem(650);
   overflow: hidden;
   z-index: 1;
   position: relative;
@@ -177,9 +177,9 @@
     width: rem(650);
   }
 
-  // @include extra-large {
-  //   width: rem(700);
-  // }
+  @include extra-large {
+    width: rem(700);
+  }
 
   @include huge {
     width: rem(820);
