@@ -243,11 +243,6 @@ li {
     width: 40.625rem;
   }
 }
-@media (min-width: 1200px) {
-  .slider {
-    width: 43.75rem;
-  }
-}
 @media (min-width: 1440px) {
   .slider {
     width: 51.25rem;
