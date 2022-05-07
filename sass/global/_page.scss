@@ -186,7 +186,8 @@
   }
 
   &__container {
-    width: 100%;
+    // width: 100%;
+    width: rem(650);
     display: flex;
     transform: translateX(0);
     transition: transform 0.7s ease;
