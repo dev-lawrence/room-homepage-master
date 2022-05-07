@@ -204,6 +204,9 @@ li {
   }
 }
 
+.flex {
+  overflow: hidden;
+}
 @media (min-width: 912px) {
   .flex {
     display: grid;
@@ -219,8 +222,14 @@ li {
 
 .slider {
   width: 40.625rem;
+  overflow: hidden;
   z-index: 1;
   position: relative;
+}
+@media (min-width: 576px) {
+  .slider {
+    width: 100%;
+  }
 }
 @media (min-width: 912px) {
   .slider {
