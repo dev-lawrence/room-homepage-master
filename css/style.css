@@ -221,7 +221,6 @@ li {
 }
 
 .slider {
-  width: 40.625rem;
   overflow: hidden;
   z-index: 1;
   position: relative;
