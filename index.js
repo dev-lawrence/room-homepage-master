@@ -8,6 +8,8 @@ const sliderContainer = document.querySelector('.slider__container');
 const slides = Array.from(sliderContainer.children);
 const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
+const img = document.querySelector('.h');
+const showWidth = img.offsetWidth;
 const slideSize = sliderContainer.offsetWidth;
 // const slideSize = slider.getBoundingClientRect().width;
 let currentSlide = 0;
@@ -18,6 +20,7 @@ const body = document.querySelector('body');
 const overLay = document.querySelector('.overlay');
 
 console.log(slideSize);
+console.log(showWidth);
 
 // MENU
 const menuFunction = () => {
