@@ -157,3 +157,8 @@ const prevSlide = () => {
 
 nextBtn.addEventListener('click', nextSlide);
 prevBtn.addEventListener('click', prevSlide);
+
+const reloadUsingLocationHash = () => {
+  window.location.hash = 'reload';
+};
+window.onload = reloadUsingLocationHash();
