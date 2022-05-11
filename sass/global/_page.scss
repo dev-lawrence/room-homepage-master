@@ -186,7 +186,7 @@
 
 .carousel {
   position: relative;
-  height: 500px;
+  height: rem(500);
   transition: transform 0.4s cubic-bezier(0.48, 0.15, 0.18, 1);
 
   &__img {
@@ -202,47 +202,6 @@
     }
   }
 }
-
-// SLIDERS
-// .slider {
-//   width: rem(650);
-//   overflow: hidden;
-//   z-index: 1;
-//   position: relative;
-
-//   @include landscape {
-//     width: 100%;
-//   }
-
-//   @include tablet {
-//     grid-row: 1/4;
-//     width: rem(500);
-//     position: static;
-//   }
-
-//   @include large {
-//     width: rem(650);
-//   }
-
-//   @include extra-large {
-//     width: rem(700);
-//   }
-
-//   @include huge {
-//     width: rem(820);
-//   }
-
-//   &__container {
-//     display: flex;
-//     transform: translateX(0);
-//     transition: transform 0.7s ease;
-//   }
-
-//   img {
-//     object-fit: contain;
-//     height: 100%;
-//   }
-// }
 
 // BUTTONS
 .buttons {
@@ -415,22 +374,3 @@
     }
   }
 }
-
-// // CAROUSEL SLIDER
-// .carousel {
-//   position: relative;
-//   height: 400px;
-//   transition: transform 0.4s cubic-bezier(0.23, 0.13, 0.23, 0.13);
-
-//   &__img {
-//     height: 100%;
-//     width: 100%;
-//     position: absolute;
-
-//     img {
-//       height: 100%;
-//       width: 100%;
-//       object-fit: cover;
-//     }
-//   }
-// }

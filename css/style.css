@@ -61,6 +61,7 @@ body.show {
   }
 }
 img {
+  width: 100%;
   vertical-align: middle;
 }
 
@@ -256,7 +257,7 @@ li {
 
 .carousel {
   position: relative;
-  height: 500px;
+  height: 31.25rem;
   transition: transform 0.4s cubic-bezier(0.48, 0.15, 0.18, 1);
 }
 .carousel__img {
