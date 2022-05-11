@@ -224,6 +224,34 @@ li {
 
 .wrapper {
   overflow: hidden;
+  width: 650px;
+}
+@media (min-width: 576px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+@media (min-width: 912px) {
+  .wrapper {
+    grid-row: 1/4;
+    width: 31.25rem;
+    position: static;
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    width: 40.625rem;
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 43.75rem;
+  }
+}
+@media (min-width: 1440px) {
+  .wrapper {
+    width: 51.25rem;
+  }
 }
 
 .carousel {
