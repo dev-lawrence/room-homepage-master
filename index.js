@@ -118,11 +118,9 @@ const moveSlide = () => {
 //move to next slide
 const nextSlide = () => {
   currentSlide++;
-  console.log(currentSlide);
 
   if (currentSlide > imgLength - 1) {
     currentSlide = 0;
-    console.log(currentSlide);
   }
 
   const active = document.querySelector('.active');
