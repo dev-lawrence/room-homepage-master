@@ -1,6 +1,9 @@
-window.setInterval(function () {
-  window.location.reload();
-}, 3000);
+window.onload = function () {
+  if (!window.location.hash) {
+    window.location = window.location + '#loaded';
+    window.location.reload();
+  }
+};
 
 const menuBar = document.querySelector('.menu');
 const headerContent = document.querySelector('.header__content-nav');
