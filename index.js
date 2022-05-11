@@ -1,5 +1,8 @@
+let reload = localStorage.getItem('me');
+
 const reloadUsingLocationHash = (yea) => {
   window.location.hash = 'reload';
+  localStorage.setItem('me', 'yea');
 };
 window.onload = reloadUsingLocationHash(true);
 
