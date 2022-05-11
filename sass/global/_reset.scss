@@ -3,11 +3,19 @@
 @use '../util/functions' as *;
 @use '../util/breakpoints' as *;
 
-* {
+//  {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+//   scroll-behavior: smooth;
+// }
+
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 body {
