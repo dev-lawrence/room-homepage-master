@@ -1,3 +1,8 @@
+const reloadUsingLocationHash = () => {
+  window.location.hash = 'reload';
+};
+window.onload = reloadUsingLocationHash();
+
 const menuBar = document.querySelector('.menu');
 const headerContent = document.querySelector('.header__content-nav');
 const logo = document.querySelector('.logo');
@@ -157,8 +162,3 @@ const prevSlide = () => {
 
 nextBtn.addEventListener('click', nextSlide);
 prevBtn.addEventListener('click', prevSlide);
-
-const reloadUsingLocationHash = () => {
-  window.location.hash = 'reload';
-};
-window.onload = reloadUsingLocationHash();
