@@ -1,10 +1,6 @@
-let reload = localStorage.getItem('me');
-
-const reloadUsingLocationHash = (yea) => {
-  window.location.hash = 'reload';
-  localStorage.setItem('me', 'yea');
-};
-window.onload = reloadUsingLocationHash(true);
+window.setInterval(function () {
+  window.location.reload();
+}, 3000);
 
 const menuBar = document.querySelector('.menu');
 const headerContent = document.querySelector('.header__content-nav');
