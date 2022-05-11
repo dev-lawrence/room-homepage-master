@@ -161,27 +161,27 @@
   overflow: hidden;
   width: 650px;
 
-  @include landscape {
-    width: 100%;
-  }
+  // @include landscape {
+  //   width: 100%;
+  // }
 
-  @include tablet {
-    grid-row: 1/4;
-    width: rem(500);
-    position: static;
-  }
+  // @include tablet {
+  //   grid-row: 1/4;
+  //   width: rem(500);
+  //   position: static;
+  // }
 
-  @include large {
-    width: rem(650);
-  }
+  // @include large {
+  //   width: rem(650);
+  // }
 
-  @include extra-large {
-    width: rem(700);
-  }
+  // @include extra-large {
+  //   width: rem(700);
+  // }
 
-  @include huge {
-    width: rem(820);
-  }
+  // @include huge {
+  //   width: rem(820);
+  // }
 }
 
 .carousel {
