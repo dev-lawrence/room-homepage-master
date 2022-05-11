@@ -95,7 +95,7 @@ navLinks.forEach((link) => {
 const carousel = document.querySelector('.carousel');
 const carouselSlides = Array.from(carousel.children);
 const imgLength = carouselSlides.length;
-const slideSize = carouselSlides[0].offsetWidth;
+const slideSize = carouselSlides[0].clientWidth;
 let currentSlide = 0;
 console.log(slideSize);
 
