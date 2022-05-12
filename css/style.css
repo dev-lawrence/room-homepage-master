@@ -282,8 +282,8 @@ li {
 }
 @media (min-width: 912px) {
   .buttons {
-    top: 16.5625rem;
-    left: -25.8125rem;
+    top: 27.9375rem;
+    left: -18.875rem;
     grid-column: 2/3;
     grid-row: 3;
     transform: translateY(0px);

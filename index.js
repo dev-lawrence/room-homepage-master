@@ -23,7 +23,6 @@ const heroContainer = document.querySelector('.hero__container');
 const heroText = Array.from(heroContainer.children);
 const body = document.querySelector('body');
 const overLay = document.querySelector('.overlay');
-console.log(slideSize);
 
 // MENU
 const menuFunction = () => {
