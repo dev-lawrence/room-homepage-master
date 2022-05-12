@@ -207,18 +207,18 @@ li {
   }
 }
 
-.flex {
+.grid {
   overflow: hidden;
 }
 @media (min-width: 912px) {
-  .flex {
+  .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 12.5rem;
   }
 }
 @media (min-width: 1024px) {
-  .flex {
+  .grid {
     grid-template-rows: unset;
   }
 }
